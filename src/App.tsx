@@ -1796,29 +1796,33 @@ function App() {
                     {/* Categories Row */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                       {getCategoriesForRow(rowIndex).map((category, index) => (
-                        <div 
+                        <div
                           key={index}
                           onClick={() => handleCategoryClick(category.id)}
-                          className="group bg-white/80 hover:bg-white border border-slate-200/60 hover:border-blue-300/60 rounded-lg transition-all duration-200 hover:shadow-md cursor-pointer backdrop-blur-sm aspect-square w-[90%] mx-auto p-2"
+                          className="group bg-gradient-to-br from-cyan-100 to-blue-100 hover:from-cyan-50 hover:to-blue-50 border border-slate-200/60 hover:border-blue-300/60 rounded-xl transition-all duration-200 hover:shadow-lg cursor-pointer backdrop-blur-sm p-4"
                         >
-                          <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                          <div className="relative">
-                            <div className={`w-12 h-12 bg-gradient-to-br ${category.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200 shadow-md`}>
-                              <category.icon className="w-6 h-6 text-white" />
-                            </div>
-                            <h3 className="font-semibold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
-                              <div className="flex flex-col items-center justify-center h-full">
-                                {category.name}
+                          <div className="flex flex-col items-center justify-center text-center">
+                            {category.id === 'mobile' ? (
+                              <div className="w-32 h-32 mb-3 relative flex items-center justify-center">
+                                <img
+                                  src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=300&h=300"
+                                  alt="Telefonia mobilă"
+                                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                                />
                               </div>
+                            ) : (
+                              <div className={`w-20 h-20 bg-gradient-to-br ${category.gradient} rounded-2xl flex items-center justify-center mb-3 group-hover:scale-105 transition-transform duration-200 shadow-lg`}>
+                                <category.icon className="w-10 h-10 text-white" />
+                              </div>
+                            )}
+                            <h3 className="font-semibold text-slate-800 text-base mb-1 group-hover:text-blue-600 transition-colors">
+                              {category.name}
                             </h3>
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-slate-500">{category.count} servicii</span>
-                              {category.services ? (
-                                expandedCategory === category.id ? 
+                            <div className="flex items-center justify-center space-x-2 w-full">
+                              {category.services && (
+                                expandedCategory === category.id ?
                                   <ChevronUp className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-all duration-200" /> :
                                   <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-all duration-200" />
-                              ) : (
-                                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200" />
                               )}
                             </div>
                           </div>

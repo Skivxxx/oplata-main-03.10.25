@@ -642,57 +642,55 @@ function App() {
                             className="w-full px-4 py-3 bg-white/95 border-0 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-800 placeholder-gray-500 font-medium"
                           />
                         </div>
-                        
-                        <div className="space-y-4">
-                          <div className="col-span-2">
-                            <label className="block text-white font-medium mb-2 text-sm">
-                              Suma
-                            </label>
-                            <div className="flex">
-                              <input
-                                type="number"
-                                placeholder="0.00"
-                                value={transferData.amount}
-                                onChange={(e) => setTransferData({...transferData, amount: e.target.value})}
-                                className="flex-1 px-4 py-3 bg-white/95 border-0 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-800 placeholder-gray-500 font-medium"
-                              />
-                              <div className="bg-white/95 px-4 py-3 rounded-r-lg border-l border-gray-200">
-                                <span className="text-gray-800 font-medium">MDL</span>
-                              </div>
+
+                        <div>
+                          <label className="block text-white font-medium mb-2 text-sm">
+                            Suma
+                          </label>
+                          <div className="flex">
+                            <input
+                              type="number"
+                              placeholder="0.00"
+                              value={transferData.amount}
+                              onChange={(e) => setTransferData({...transferData, amount: e.target.value})}
+                              className="flex-1 px-4 py-3 bg-white/95 border-0 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-800 placeholder-gray-500 font-medium"
+                            />
+                            <div className="bg-white/95 px-4 py-3 rounded-r-lg border-l border-gray-200">
+                              <span className="text-gray-800 font-medium">MDL</span>
                             </div>
                           </div>
-                          
-                          <div className="col-span-2">
-                            <label className="block text-white font-medium mb-2 text-sm">
-                              Comision
-                            </label>
-                            <div className="flex">
-                              <input
-                                type="text"
-                                placeholder="0.00"
-                                readOnly
-                                className="flex-1 px-4 py-3 bg-white/95 border-0 rounded-l-lg focus:outline-none text-gray-800 font-medium"
-                              />
-                              <div className="bg-white/95 px-4 py-3 rounded-r-lg border-l border-gray-200">
-                                <span className="text-gray-800 font-medium">MDL</span>
-                              </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-white font-medium mb-2 text-sm">
+                            Comision
+                          </label>
+                          <div className="flex">
+                            <input
+                              type="text"
+                              placeholder="0.00"
+                              readOnly
+                              className="flex-1 px-4 py-3 bg-white/95 border-0 rounded-l-lg focus:outline-none text-gray-800 font-medium"
+                            />
+                            <div className="bg-white/95 px-4 py-3 rounded-r-lg border-l border-gray-200">
+                              <span className="text-gray-800 font-medium">MDL</span>
                             </div>
                           </div>
-                          
-                          <div className="col-span-2">
-                            <label className="block text-white font-medium mb-2 text-sm">
-                              Total cu comision
-                            </label>
-                            <div className="flex">
-                              <input
-                                type="text"
-                                placeholder="0.00"
-                                readOnly
-                                className="flex-1 px-4 py-3 bg-white/95 border-0 rounded-l-lg focus:outline-none text-gray-800 font-medium"
-                              />
-                              <div className="bg-white/95 px-4 py-3 rounded-r-lg border-l border-gray-200">
-                                <span className="text-gray-800 font-medium">MDL</span>
-                              </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-white font-medium mb-2 text-sm">
+                            Total cu comision
+                          </label>
+                          <div className="flex">
+                            <input
+                              type="text"
+                              placeholder="0.00"
+                              readOnly
+                              className="flex-1 px-4 py-3 bg-white/95 border-0 rounded-l-lg focus:outline-none text-gray-800 font-medium"
+                            />
+                            <div className="bg-white/95 px-4 py-3 rounded-r-lg border-l border-gray-200">
+                              <span className="text-gray-800 font-medium">MDL</span>
                             </div>
                           </div>
                         </div>
